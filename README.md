@@ -37,6 +37,17 @@
 
 ---
 
+## 在线试用（无需安装）
+
+手机浏览器直接打开：
+
+### 👉 https://nightdark-ui.github.io/ai-car-scan/
+
+- 必须是 HTTPS（GitHub Pages 已提供），`file://` 打不开摄像头
+- 首次进入要加载 4.4 MB 模型，约 3–8 秒
+- 检测在浏览器内用 MediaPipe + WASM 跑，图片不出设备
+- 网页版**不支持车牌 OCR**，会显示「网页版暂不支持」
+
 ## 下载安装
 
 到 [Releases](../../releases) 页下载最新的 `AI爽窥-x.y.z.apk`，传到手机安装（需要允许「未知来源」）。
