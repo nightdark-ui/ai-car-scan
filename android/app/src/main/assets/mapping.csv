@@ -1,0 +1,64 @@
+real_brand,body_type,display_cn,game_brand_cn,game_model_cn,game_brand_en,game_model_en,value_usd,note
+丰田,轿车,卡林 爱硕普,卡林,爱硕普,Karin,Asterope,26000,经典对应
+丰田,SUV,卡林 碧杰 XL,卡林,碧杰 XL,Karin,BeeJay XL,45000,近似
+丰田,两厢,卡林 爱快名人油电车,卡林,爱快名人油电车,Karin,Dilettante,25000,混动
+本田,轿车,丁卡 旅行家,丁卡,旅行家,Dinka,Blista,24000,经典对应
+本田,跑车,丁卡 小丑,丁卡,小丑,Dinka,Jester,240000,NSX 类
+日产,跑车,爱尼仕 挽歌 RH8,爱尼仕,挽歌 RH8,Annis,Elegy RH8,95000,GT-R
+斯巴鲁,轿车,卡林 王者,卡林,王者,Karin,Sultan,12000,翼豹
+宝马,轿车,绝品 卫士,绝品,卫士,Übermacht,Sentinel,95000,3系
+宝马,轿车,绝品 先知,绝品,先知,Übermacht,Oracle,150000,7系
+宝马,SUV,绝品 卫士 XS,绝品,卫士 XS,Übermacht,Sentinel XS,175000,X3/X5
+宝马,SUV,绝品 瑞巴拉 GTS,绝品,瑞巴拉 GTS,Übermacht,Rebla GTS,285000,X6
+宝马,跑车,绝品 锡安,绝品,锡安,Übermacht,Zion,120000,6系
+奔驰,轿车,贝飞特 莎夫特,贝飞特,莎夫特,Benefactor,Schafter,116000,C/E级
+奔驰,轿车,贝飞特 莎夫特 V12,贝飞特,莎夫特 V12,Benefactor,Schafter V12,116000,S级
+奔驰,SUV,贝飞特 迪布达,贝飞特,迪布达,Benefactor,Dubsta,190000,G级
+奔驰,SUV,贝飞特 瑟雷诺,贝飞特,瑟雷诺,Benefactor,Serrano,110000,GLE
+奔驰,跑车,贝飞特 飞特者,贝飞特,飞特者,Benefactor,Feltzer,145000,SL
+奔驰,跑车,贝飞特 战兵,贝飞特,战兵,Benefactor,Krieger,1300000,AMG GT
+奥迪,轿车,奥北 密探,奥北,密探,Obey,Tailgater,90000,A6
+奥迪,轿车,奥北 密探 S,奥北,密探 S,Obey,Tailgater S,165000,RS6
+奥迪,SUV,奥北 小辣椒,奥北,小辣椒,Obey,Rocoto,85000,Q5
+奥迪,跑车,奥北 9F,奥北,9F,Obey,9F,120000,R8
+大众,两厢,毕福 俱乐部,毕福,俱乐部,BF,Club,128000,高尔夫
+保时捷,跑车,菲斯特 陆上彗星,菲斯特,陆上彗星,Pfister,Comet,100000,911
+保时捷,跑车,菲斯特 811,菲斯特,811,Pfister,811,1135000,918
+法拉利,跑车,古罗帝 披治 R,古罗帝,披治 R,Grotti,Turismo R,500000,488
+法拉利,跑车,古罗帝 汗血宝马,古罗帝,汗血宝马,Grotti,Carbonizzare,195000,加州
+法拉利,跑车,古罗帝 猎豹,古罗帝,猎豹,Grotti,Cheetah,650000,Enzo
+兰博基尼,跑车,佩嘉西 炼狱魔,佩嘉西,炼狱魔,Pegassi,Infernus,440000,盖拉多
+兰博基尼,跑车,佩嘉西 奥西里斯,佩嘉西,奥西里斯,Pegassi,Osiris,1950000,埃文塔多
+兰博基尼,跑车,佩嘉西 泰皮斯达,佩嘉西,泰皮斯达,Pegassi,Tempesta,1329000,飓风；GTA6 媒体译作"坦佩斯塔"
+兰博基尼,跑车,佩嘉西 斗牛,佩嘉西,斗牛,Pegassi,Torero,1200000,Countach
+福特,跑车,威皮 公路霸者,威皮,公路霸者,Vapid,Dominator,35000,野马；部分版本译作"统治者"
+福特,皮卡,威皮 争夺者,威皮,争夺者,Vapid,Contender,250000,F150
+福特,轿车,威皮 史塔尼亚,威皮,史塔尼亚,Vapid,Stanier,15000,维多利亚皇冠
+雪佛兰,跑车,绝致 活力够,绝致,活力够,Declasse,Vigero,35000,科迈罗
+雪佛兰,SUV,绝致 屌王,绝致,屌王,Declasse,Granger,95000,Suburban
+道奇,轿车,冒险家 猛牛,冒险家,猛牛,Bravado,Buffalo,35000,Charger
+道奇,跑车,冒险家 铁腕,冒险家,铁腕,Bravado,Gauntlet,45000,挑战者
+道奇,跑车,冒险家 女妖,冒险家,女妖,Bravado,Banshee,105000,蝰蛇
+吉普,SUV,卡尼斯 岩魔,卡尼斯,岩魔,Canis,Mesa,25000,牧马人
+吉普,SUV,卡尼斯 陆上专家,卡尼斯,陆上专家,Canis,Seminole,60000,大切诺基
+路虎,SUV,悠游 行者,悠游,行者,Gallivanter,Baller,90000,揽胜
+悍马,SUV,巨象 爱国者,巨象,爱国者,Mammoth,Patriot,55000,H2
+特斯拉,轿车,旋风 雷电,旋风,雷电,Coil,Raiden,1375000,Model S
+特斯拉,跑车,旋风 狂雷,旋风,狂雷,Coil,Voltic,150000,Roadster
+MINI,两厢,威尼 天威,威尼,天威,Weeny,Issi,18000,Cooper
+宾利,轿车,埃努斯 至尊慧眼,埃努斯,至尊慧眼,Enus,Cognoscenti,254000,飞驰
+劳斯莱斯,轿车,埃努斯 金钻耀星,埃努斯,金钻耀星,Enus,Super Diamond,250000,幻影
+捷豹,轿车,欧斯洛 豺狼,欧斯洛,豺狼,Ocelot,Jackal,90000,XF
+捷豹,跑车,欧斯洛 F620,欧斯洛,F620,Ocelot,F620,240000,F-Type
+雷克萨斯,轿车,亚班尼 皇霸天,亚班尼,皇霸天,Albany,Emperor,6000,LS
+沃尔沃,轿车,福狮 英卡特,福狮,英卡特,Vulcar,Ingot,25000,850；旅行车归入轿车
+凯迪拉克,SUV,亚班尼 骑兵,亚班尼,骑兵,Albany,Cavalcade,75000,凯雷德
+三菱,跑车,麦霸子 半影使者,麦霸子,半影使者,Maibatsu,Penumbra,20000,Eclipse
+*,轿车,卡林 爱硕普,卡林,爱硕普,Karin,Asterope,26000,兜底
+*,两厢,丁卡 旅行家,丁卡,旅行家,Dinka,Blista,24000,兜底
+*,SUV,悠游 行者,悠游,行者,Gallivanter,Baller,90000,兜底
+*,跑车,古罗帝 披治 R,古罗帝,披治 R,Grotti,Turismo R,500000,兜底
+*,皮卡,威皮 争夺者,威皮,争夺者,Vapid,Contender,250000,兜底
+*,MPV,威霸 小马,威霸,小马,Brute,Pony,25000,兜底
+*,卡车,MTL 跑德,MTL,跑德,MTL,Pounder,150000,兜底
+*,摩托,佩嘉西 801 巴提,佩嘉西,801 巴提,Pegassi,Bati 801,15000,兜底
