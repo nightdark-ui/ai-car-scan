@@ -874,23 +874,47 @@ body.live #fallback{display:none}
     requestAnimationFrame(liveLoop);
   }
 
-  function createDetector(){
-    return import('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14')
+  function createDetector(mode){
+      return import('./vendor/vision_bundle.mjs')
       .then(function(mod){
         return mod.FilesetResolver
-          .forVisionTasks('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/wasm')
+          .forVisionTasks('./vendor/wasm')
           .then(function(fs){ return { mod: mod, fs: fs }; });
       })
       .then(function(ctx){
         var opts = {
           baseOptions: { modelAssetPath: 'efficientdet_lite0.tflite', delegate: 'CPU' },
-          runningMode: 'VIDEO',
+          runningMode: mode || 'VIDEO',
           scoreThreshold: 0.3,
           maxResults: 5
         };
         return ctx.mod.ObjectDetector.createFromOptions(ctx.fs, opts);
       });
   }
+
+
+  function runProbe(){
+    setBusy('PROBE 加载中…');
+    fetch('selfcheck.jpg').then(function(r){ return r.blob(); })
+      .then(function(b){ return createImageBitmap(b); })
+      .then(function(bmp){
+        return createDetector('IMAGE').then(function(det){
+          var res = det.detect(bmp);
+          var list = res.detections || [];
+          var names = list.slice(0, 3).map(function(d){
+            var c = d.categories[0];
+            return c.categoryName + ':' + c.score.toFixed(2);
+          }).join('  ');
+          setBusy('PROBE DET ' + list.length + (names ? '\n' + names : ''));
+          document.title = 'PROBE n=' + list.length;
+        });
+      })
+      .catch(function(e){
+        setBusy('PROBE FAIL: ' + ((e && e.message) || e));
+        document.title = 'PROBE FAIL';
+      });
+  }
+  if (location.search.indexOf('probe=1') >= 0) runProbe();
 
   function startLive(){
     if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){

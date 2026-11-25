@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """从 index.html 生成网页真识别版 docs/index.html"""
 import os
 import re
@@ -225,10 +225,10 @@ LIVE_JS = r"""
   }
 
   function createDetector(){
-    return import('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14')
+      return import('./vendor/vision_bundle.mjs')
       .then(function(mod){
         return mod.FilesetResolver
-          .forVisionTasks('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/wasm')
+          .forVisionTasks('./vendor/wasm')
           .then(function(fs){ return { mod: mod, fs: fs }; });
       })
       .then(function(ctx){
@@ -282,6 +282,39 @@ html = html.replace("</style>", """
 body.live #stage{background:#000}
 body.live #fallback{display:none}
 </style>""")
+
+
+# 12) 诊断模式：?probe=1 直接对内置图跑一次检测
+html = html.replace("  function createDetector(){",
+                    "  function createDetector(mode){", 1)
+html = html.replace("runningMode: 'VIDEO',",
+                    "runningMode: mode || 'VIDEO',", 1)
+
+PROBE_JS = r"""
+  function runProbe(){
+    setBusy('PROBE 加载中…');
+    fetch('selfcheck.jpg').then(function(r){ return r.blob(); })
+      .then(function(b){ return createImageBitmap(b); })
+      .then(function(bmp){
+        return createDetector('IMAGE').then(function(det){
+          var res = det.detect(bmp);
+          var list = res.detections || [];
+          var names = list.slice(0, 3).map(function(d){
+            var c = d.categories[0];
+            return c.categoryName + ':' + c.score.toFixed(2);
+          }).join('  ');
+          setBusy('PROBE DET ' + list.length + (names ? '\n' + names : ''));
+          document.title = 'PROBE n=' + list.length;
+        });
+      })
+      .catch(function(e){
+        setBusy('PROBE FAIL: ' + ((e && e.message) || e));
+        document.title = 'PROBE FAIL';
+      });
+  }
+  if (location.search.indexOf('probe=1') >= 0) runProbe();
+"""
+html = html.replace("  function startLive(){", PROBE_JS + "\n  function startLive(){", 1)
 
 open(os.path.join(dst_dir, "index.html"), "w", encoding="utf-8").write(html)
 print("docs/index.html", len(html), "bytes")
