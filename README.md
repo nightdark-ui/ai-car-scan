@@ -10,6 +10,8 @@
   <img src="shot-result.png" width="240" alt="结果卡">
 </p>
 
+[▶ 观看 15 秒宣传片](video/promo.mp4)
+
 ---
 
 ## 它能做什么
